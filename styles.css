@@ -1,0 +1,162 @@
+/* =====================================
+   RESET Y VARIABLES - ESTILO ONLYTWO
+   ===================================== */
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+    --color-primary: #910505;
+    --color-secondary: #e70865;
+    --color-lead-dark: #f3276b;
+    --color-lead-light: #f70909;
+    --color-text: #f3ecec;
+    --color-text-gray: #0c0311;
+    --nav-height: 100px;
+    --skew-angle: -5deg;
+    --transition: all 0.3s ease;
+}
+
+html { scroll-behavior: smooth; }
+body {
+    font-family: "Permanent Marker", cursive;
+    background: linear-gradient(100deg, #e738ad 20%, #7a3fb4 80%);
+    color: var(--color-text);
+    line-height: 1.6;
+    overflow-x: hidden; /* Importante para evitar scroll lateral */
+}
+
+/* FONDO ANIMADO */
+body::before {
+    content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background-image:
+        linear-gradient(rgba(157, 3, 247, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(188, 7, 243, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    animation: moveGrid 15s linear infinite;
+    z-index: -1; opacity: 0.6;
+}
+@keyframes moveGrid { from { background-position: 0 0; } to { background-position: 80px 40px; } }
+
+h1, h2, h3, .logo { font-family: "Permanent Marker", cursive; text-transform: uppercase; letter-spacing: 1px; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+.text-primary { color: var(--color-primary); }
+.text-secondary { color: var(--color-secondary); }
+
+/* =====================================
+   NAVEGACIÓN (Navbar)
+   ===================================== */
+.navbar {
+    background-color: rgba(48, 6, 97, 0.95);
+    height: var(--nav-height);
+    position: sticky; top: 0; z-index: 1000;
+    border-bottom: 2px solid var(--color-primary);
+    backdrop-filter: blur(5px);
+}
+.navbar-container {
+    height: 100%; display: flex; justify-content: space-between; align-items: center; position: relative;
+}
+
+.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: white; font-size: 1.6rem; font-weight: 900; font-style: italic; z-index: 1002; }
+
+/* =====================================
+   HERO
+   ===================================== */
+.hero {
+    padding: 6rem 0 4rem;
+    background: linear-gradient(180deg, rgba(15,16,17,0) 0%, var(--color-bg-dark) 100%);
+    text-align: center; border-bottom: 3px solid #53055e;
+}
+.hero h1 { font-size: 3.5rem; margin-bottom: 1rem; }
+.hero p { font-size: 1.5rem; color: var(--color-text-gray); max-width: 800px; margin: 0 auto; }
+
+/* =====================================
+   MÓDULOS
+   ===================================== */
+.modules-wrapper { min-height: 50vh; padding-bottom: 4rem; }
+
+.module { 
+    display: none; padding-top: 3rem; padding-bottom: 3rem;
+    border-bottom: 2px double #f8f2f2; 
+}
+.module:last-child { border-bottom: none; }
+.module.active { display: block; animation: slideUpFade 0.6s ease forwards; }
+
+@keyframes slideUpFade {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.section-title {
+    font-size: 1.8rem; margin-bottom: 2rem;
+    border-left: 4px solid var(--color-primary); padding-left: 15px;
+}
+
+/* =====================================
+   TARJETAS (Ahora son <a>)
+   ===================================== */
+.portfolio-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 2rem;
+}
+
+/* El <a> que envuelve todo */
+.cyber-card {
+    background-color: var(--color-lead-dark);
+    border: 1px solid #df1515;
+    border-top: 5px solid var(--color-secondary);
+    border-radius: 30px;
+    overflow: hidden;
+    transition: var(--transition);
+    position: relative;
+    display: flex; flex-direction: column;
+    text-decoration: none; /* Quita subrayado del enlace */
+    color: inherit; /* Hereda color de texto */
+}
+
+.cyber-card:hover {
+    transform: translateY(-10px);
+    border-top-color: var(--color-primary);
+    box-shadow: 0 10px 30px rgba(255, 46, 46, 0.2);
+    background-color: var(--color-lead-light);
+}
+
+.card-image {
+    width: 100%; height: 180px; position: relative; overflow: hidden; background-color: #000;
+}
+.card-image img {
+    width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;
+}
+.cyber-card:hover .card-image img { transform: scale(1.1); }
+
+.card-overlay {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6); display: flex; justify-content: center; align-items: center;
+    opacity: 0; transition: var(--transition);
+}
+.card-overlay i { font-size: 2.5rem; color: var(--color-secondary); }
+.cyber-card:hover .card-overlay { opacity: 1; }
+
+.card-content { padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; }
+.cyber-card h3 { font-size: 1.3rem; margin-bottom: 0.5rem; color: white; }
+.cyber-card p { font-size: 0.9rem; color: var(--color-text-gray); margin-bottom: 1.5rem; flex-grow: 1; }
+
+/* Simulación de Botón (Span) */
+.btn-cta-small {
+    align-self: flex-start; display: inline-block; padding: 0.5rem 1rem;
+    background: transparent; color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    font-weight: 700; font-family: 'Orbitron', sans-serif; font-size: 0.8rem;
+    transform: skew(var(--skew-angle)); transition: var(--transition);
+}
+/* Efecto hover en el botón cuando pasas el mouse por la tarjeta */
+.cyber-card:hover .btn-cta-small {
+    background: var(--color-primary); color: white;
+    box-shadow: 0 0 10px var(--color-primary);
+}
+
+/* =====================================
+   FOOTER
+   ===================================== */
+.footer {
+    background-color: rgb(53, 4, 94); padding: 2rem 0; text-align: center;
+    border-top: 1px solid #7606f7; font-size: 0.9rem; color: #faf5f5; margin-top: auto;
+}
