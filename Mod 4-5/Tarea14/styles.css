@@ -1,0 +1,278 @@
+/* =====================================
+   ADAPTED STYLES - NAVBAR FLEXBOX
+   ===================================== */
+
+/* 1. IMPORTS Y VARIABLES */
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #ff2e2e;      
+    --color-secondary: #f80e8f;    
+    --color-bg-dark: #f06af5;      
+    --color-lead-dark: #0984ff;    
+    --color-lead-light: #0fc3f5;   
+    --color-text: #ffffff;
+    --color-text-gray: #040505;
+    --skew-angle: -5deg;
+    --transition: all 0.3s ease;
+    --nav-height: 80px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Audiowide', sans-serif;
+    background-color: var(--color-bg-dark);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Audiowide', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ==============================
+   NAVBAR
+   ============================== */
+.navbar {
+    backdrop-filter: blur(5px);
+    height: var(--nav-height);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid var(--color-primary);
+}
+
+.navbar-container {
+    background: rgb(7, 43, 85);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+/* ==============================
+   LOGO
+   ============================== */
+.navbar-logo a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+    font-family: 'Audiowide', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 900;
+    font-style: italic;
+}
+
+.navbar-logo .highlight { color: var(--color-primary); }
+
+/* ==============================
+   MENÚ DE NAVEGACIÓN
+   ============================== */
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    margin: 0; /* Reset margin */
+}
+
+.navbar-menu li a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 10px;
+    transition: var(--transition);
+    border: 3px groove;
+}
+
+.navbar-menu li a:hover, .navbar-menu li a.active {
+    color: var(--color-secondary);
+    border-left-color: var(--color-primary);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* ==============================
+   BOTONES DE ACCIÓN
+   ============================== */
+.navbar-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.btn {
+    font-family: 'Audiowide', sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: var(--transition);
+    border: 3px groove;
+    background: transparent;
+    padding: 0.6rem 1.2rem;
+}
+.btn > span {
+    display: inline-block;
+}
+
+.btn-login {
+    color: var(--color-secondary);
+    border-color: var(--color-secondary);
+}
+.btn-login:hover {
+    background: var(--color-secondary);
+    color: var(--color-bg-dark);
+}
+
+.btn-signup {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+.btn-signup:hover {
+    background: var(--color-primary);
+    color: var(--color-text);
+}
+
+/* ==============================
+   BOTÓN HAMBURGUESA
+   ============================== */
+.navbar-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.navbar-toggle span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: white;
+    position: relative;
+    transition: var(--transition);
+    margin: 5px 0;
+}
+
+.navbar-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(6px, 6px); }
+.navbar-toggle.active span:nth-child(2) { opacity: 0; }
+.navbar-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
+
+
+/* ==============================
+   SECCIONES DE CONTENIDO
+   ============================== */
+.page-header {
+    padding: 3rem 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.page-header h1 { color: var(--color-secondary); font-size: 2rem; }
+.page-header .lead-description {
+    font-size: 1.1rem;
+    color: var(--color-text-gray);
+    border-left: 3px solid var(--color-primary);
+    padding-left: 1rem;
+    margin: 1rem 0;
+}
+.student-info {
+    background: var(--color-lead-dark);
+    padding: 1rem;
+    border-left: 3px solid var(--color-secondary);
+    margin-top: 1rem;
+}
+
+.section {
+    min-height: 80vh;
+    padding: 5rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #333;
+}
+
+.section-content {
+    max-width: 1200px;
+    width: 100%;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--color-text);
+}
+.section-hero {
+    background: linear-gradient(135deg, var(--color-lead-dark) 0%, var(--color-bg-dark) 100%);
+    text-align: center;
+}
+.section-hero h1 { font-size: 3.5rem; }
+.section-hero p { color: var(--color-text-gray); font-size: 1.3rem; margin-bottom: 2rem; }
+
+.footer {
+    background: #480458;
+    color: #f7f1f1;
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+}
+
+
+/* ==============================
+   RESPONSIVE - MOBILE
+   ============================== */
+@media (max-width: 992px) {
+    .navbar-toggle { display: block; }
+    
+    .navbar-menu {
+        position: fixed;
+        left: -100%;
+        top: var(--nav-height);
+        flex-direction: column;
+        background-color: var(--color-bg-dark);
+        width: 100%;
+        height: calc(100vh - var(--nav-height));
+        padding-top: 2rem;
+        transition: 0.4s ease;
+        gap: 0;
+        z-index: 1000;
+    }
+    .navbar-menu li { width: 100%; }
+    .navbar-menu li a { display: block; text-align: center; padding: 1rem; border: 0; }
+
+    .navbar-actions {
+        position: fixed;
+        left: -100%;
+        top: 40%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        transition: 0.4s ease 0.1s;
+        z-index: 1001;
+    }
+
+    .navbar-menu.active, .navbar-actions.active {
+        left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-hero h1 { font-size: 2.5rem; }
+    .section h2 { font-size: 2rem; }
+}

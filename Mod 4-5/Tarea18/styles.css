@@ -1,0 +1,78 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+/* Reseteo básico y estilos generales */
+body {
+    font-family: "Audiowide", sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f194d6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgb(252, 182, 182);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
+}
+
+h2 {
+    color: #333;
+    border: 5px solid #490670;
+    padding-left: 10px;
+    margin-top: 2rem;
+}
+
+/* Hacemos que las imágenes sean fluidas */
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+
+/* --------------------------------------------------
+   CASO 3: Lógica para Fondo Responsive
+   -------------------------------------------------- */
+
+.hero-background {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 4, 4);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    transition: background-image 0.3s ease-in-out;
+    
+    /* 1. Mobile First (Imagen pequeña por defecto) */
+    background-image: url('https://placehold.co/400x400/555/FFF?text=BG+Mobile');
+}
+
+/* 2. Tablet (Media Query) */
+@media (min-width: 600px) {
+    .hero-background {
+        background-image: url('https://placehold.co/800x400/666/FFF?text=BG+Tablet');
+    }
+}
+
+/* 3. Desktop (Media Query) */
+@media (min-width: 1024px) {
+    .hero-background {
+        background-image: url('https://placehold.co/1200x400/777/FFF?text=BG+Desktop');
+    }
+}
+
+/* 4. Pantallas de alta densidad (Retina display) - Opcional pero recomendado */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .hero-background {
+        /* Aquí cargaríamos una imagen @2x para mayor nitidez */
+        border: 2px solid rgb(251, 255, 0); /* Borde dorado solo para indicar que es pantalla retina en este demo */
+    }
+}

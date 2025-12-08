@@ -1,0 +1,128 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Audiowide', sans-serif;
+}
+
+/* ==============================
+   HOLY GRAIL LAYOUT CON GRID
+   ============================== */
+.holy-grail {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "nav main sidebar"
+        "footer footer footer";
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    gap: 1rem;
+    padding: 1rem;
+    background: #f15cff;
+}
+
+.header {
+    grid-area: header;
+    background: linear-gradient(135deg, #bb0057 0%, #4b54a2 100%);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.nav {
+    grid-area: nav;
+    background: rgb(243, 42, 193);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 5px double red;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav ul {
+    list-style: none;
+}
+
+.nav li {
+    margin: 0.5rem 0;
+}
+
+.nav a {
+    color: #faf5f9;
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.nav a:hover {
+    background: #66226e;
+}
+
+.main {
+    grid-area: main;
+    background: rgb(185, 144, 238);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 5px groove rgb(148, 2, 148);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.021);
+}
+
+.main h2 {
+    color: #110f0f;
+    margin-bottom: 1rem;
+}
+
+.main p {
+    line-height: 1.6;
+    color: #332f2f;
+    margin-bottom: 1rem;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background: rgb(177, 94, 233);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 5px groove rgb(119, 9, 119);
+    box-shadow: 0 2px 10px rgba(252, 249, 249, 0.1);
+}
+
+.widget {
+    background: #ca2e84;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    border: 3px dashed rgb(133, 1, 19);
+}
+
+.footer {
+    grid-area: footer;
+    background: #29084e;
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .holy-grail {
+        grid-template-areas:
+            "header"
+            "nav"
+            "main"
+            "sidebar"
+            "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr auto auto;
+    }
+}

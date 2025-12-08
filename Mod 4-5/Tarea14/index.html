@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solución: Navbar Flexbox Responsive</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar sticky con flexbox -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <!-- Logo -->
+            <div class="navbar-logo">
+                <a href="#inicio">
+                    <span class="logo-icon">💻</span>
+                    <span class="logo-text">Only<span class="highlight">Three</span></span>
+                </a>
+            </div>
+
+            <!-- Menú de navegación -->
+            <ul class="navbar-menu" id="navbarMenu">
+                <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                <li><a href="#info" class="nav-link">Info</a></li>
+            </ul>
+
+            <!-- Botones de acción -->
+            <div class="navbar-actions">
+                <button class="btn btn-login"><span>Ingresar</span></button>
+                <button class="btn btn-signup"><span>Registrar</span></button>
+            </div>
+
+            <!-- Botón hamburguesa para móviles -->
+            <button class="navbar-toggle" id="navbarToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main>
+        <!-- Sección Inicio -->
+        <section id="inicio" class="section section-hero">
+            <div class="section-content">
+                <h1>CreaWeb</h1>
+                <p>Te enseñamos a crear sitios web desde cero</p>
+            </div>
+        </section>
+
+        <!-- Sección Info -->
+        <section id="info" class="section">
+            <div class="section-content">
+                <h2>Sección de Información</h2>
+                <p style="text-align: center; color: var(--color-text-gray);">te ofrecemos herramientas para la creacion de paginas web con solo iniciar secion</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 OnlyThree</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
