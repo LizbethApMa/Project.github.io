@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solución: Modal Centrado</title>
+    <link rel="stylesheet" href="tarea8.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Inscribete a Premium</h1>
+        <p>Haz clic en el botón para acceder</p>
+        <button class="btn-open">Abrir Premium</button>
+        
+        <div class="info">
+            <h3>Características:</h3>
+            <ul>
+                <li>🚫 Sin anuncios</li>
+                <li>🎵 Calidad HD y Ultra HD</li>
+                <li>📥 Descarga canciones y playlist</li>
+                <li>♾️ Saltos ilimitados</li>
+                <li>🎚️ Control avanzado de audio</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Modal overlay -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <button class="btn-close" aria-label="Cerrar modal">&times;</button>
+            <div class="modal-icon">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none">
+            <!-- Círculo exterior -->
+            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+            <!-- Icono de check -->
+            <path d="M8 12l3 3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+    </div>
+
+            <h2>¡Bienvenido a Premium!</h2>
+            <p>Accediste con la cuenta: <code>Marin.gg@gmail.com</code>.</p>
+            <p>Disfruta y accede de todo el contenido de nuestra app.</p>
+            <div class="modal-features">
+                <div class="feature">
+                    <span class="feature-icon">✓</span>
+                    <span>Musica</span>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">✓</span>
+                    <span>Podcast</span>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">✓</span>
+                    <span>Audiolibros</span>
+                </div>
+            </div>
+            <button class="btn-modal-action">Entendido</button>
+        </div>
+    </div>
+
+    <script src="tarea8.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box-Sizing: content-box vs border-box</title>
+    <link rel="stylesheet" href="tarea7.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎵 Descubre Música Sin Límites</h1>
+        <p class="intro">Disfruta de una selección musical gratuita todos los días o desbloquea todo el poder del sonido con nuestro plan premium. </p>
+        
+        <div class="comparison-grid">
+            
+            <!-- Content-Box (Por Defecto) -->
+            <div class="box-wrapper">
+                <h2> Música Gratis</h2>
+                <div class="box content-box">
+                    <p><strong>Accede a una colección seleccionada de canciones libres y pistas exclusivas que puedes escuchar sin registrarte. Ideal para quienes quieren disfrutar música sin complicaciones.</strong></p>
+                </div>
+                <div class="calculation">
+                    <p>📐 Descripción:</p>
+                    <code>
+                        🎶 Reproducción ilimitada de playlist gratuitas<br>
+                        🔊 Calidad estándar (128 kbps)<br>
+                        📱 Acceso desde cualquier dispositivo<br>
+                        ⏱️ Saltos limitados por hora<br>
+                        📃 Playlist diaria “Descubrimiento”<br>
+                        <strong>“Tu música de siempre, sin costo y cuando tú quieras.”</strong>
+                    </code>
+                </div>
+            </div>
+
+            <!-- Border-Box (Recomendado) -->
+            <div class="box-wrapper">
+                <h2>✅Música Premium</h2>
+                <div class="box border-box">
+                    <p><strong>Elige la mejor calidad de sonido, cero anuncios, descargas offline y acceso total a todo el catálogo. Perfecto para creadores, amantes de la música y quienes desean escucharlo todo sin restricciones.✨</strong></p>
+                </div>
+                <div class="calculation">
+                    <p>📐 Beneficios Premium:</p>
+                    <code>
+                        🚫 Sin anuncios<br>
+                        🎵 Calidad HD y Ultra HD<br>
+                        📥 Descarga canciones y playlist<br>
+                        ♾️ Saltos ilimitados<br>
+                        🎚️ Control avanzado de audio<br>
+                        🎧 Playlist exclusivas y álbumes anticipados<br>
+                        <strong>“Sonido sin límites. Vive la música como debe escucharse.”</strong> ✅
+                    </code>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Explicación -->
+        <div class="explanation">
+            <h2>💡 ¿Por qué usar nuestra aplicación?</h2>
+            <div class="benefits-grid">
+                <div class="benefit">
+                    <h3>✅ Predecible</h3>
+                    <p>Posee una estructura simple</p>
+                </div>
+                <div class="benefit">
+                    <h3>✅ Responsive</h3>
+                    <p>Carga rapida de audio</p>
+                </div>
+                <div class="benefit">
+                    <h3>✅ Fácil de Mantener</h3>
+                    <p>No requiere actualizaciones seguidas</p>
+                </div>
+                <div class="benefit">
+                    <h3>✅ Todas las Musicas</h3>
+                    <p>Estamos al dia con las musicas</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Best Practice -->
+        <div class="best-practice">
+            <h2>⭐ Testimonios</h2>
+            <pre><code>“Con el modo premium puedo escuchar mis playlists sin internet en el trabajo. Vale totalmente la pena.”
+                 — Andrés R.
+“Me encanta la calidad HD, suena completamente diferente.”
+                 — Carla M.
+“Increible tiene todas las musicas que amo”
+                 — Paula S.
+            </code></pre>
+            <p class="tip">💡 <strong>Aviso:</strong>Pruba el plan Premiun por 30 dias completamente gratis!</p>
+        </div>
+
+        <!-- Demo Interactiva -->
+        <div class="interactive-demo">
+            <h2>🎮 Prueva nuestro ecualizador Premium</h2>
+            <p>Ajusta los valores y observa la diferencia:</p>
+            <div class="controls">
+                <label>
+                    Graves: <span id="widthValue">+10</span>
+                    <input type="range" id="widthSlider" min="100" max="400" value="200">
+                </label>
+                <label>
+                    Voz: <span id="paddingValue">+20</span>
+                    <input type="range" id="paddingSlider" min="0" max="50" value="20">
+                </label>
+                <label>
+                    Agudos: <span id="borderValue">+10</span>
+                    <input type="range" id="borderSlider" min="0" max="30" value="10">
+                </label>
+            </div>
+            <div class="demo-boxes">
+                <div class="demo-box" id="demoContentBox">
+                    <p>Inicio</p>
+                    <p>▶️</p>
+                </div>
+                <div class="demo-box demo-border-box" id="demoBorderBox">
+                    <p>Pausa</p>
+                    <p> ⏸️</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="tarea7.js"></script>
+</body>
+</html>

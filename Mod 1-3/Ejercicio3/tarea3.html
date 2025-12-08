@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ejemplo de menú de navegación responsive con efectos modernos">
+    <title>Navegación Moderna | Ejercicio 3</title>
+    <link rel="stylesheet" href="tarea3.css">
+</head>
+<body>
+    <!-- Navegación Principal -->
+    <nav class="navbar">
+        <div class="container">
+            <!-- Logo -->
+            <a href="#" class="logo">
+                <span class="logo-icon">✍</span>
+                <span class="logo-text">OnlyTwo</span>
+            </a>
+
+            <!-- Toggle para móvil (hamburguesa) -->
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+                <span class="hamburger"></span>
+            </button>
+
+            <!-- Menú de navegación -->
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="#inicio" class="nav-link active">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#servicios" class="nav-link">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#equipo" class="nav-link">Cursos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#blog" class="nav-link">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contacto" class="nav-link btn-cta">Contactar</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido de ejemplo para demostrar scroll -->
+    <section class="hero" id="inicio">
+        <div class="container">
+            <h1>Aprende con nosotros</h1>
+            <p>Clases de diseño web de manera facil y sencilla.</p>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <h3>HTML</h3>
+                    <p>Es el lenguaje que estructura el contenido de una página web.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>CSS</h3>
+                    <p>Se utiliza para dar estilo y diseño a los elementos, controlando la apariencia de la página.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>JavaScrip</h3>
+                    <p>Un lenguaje de programación que añade interactividad y dinamismo a las páginas. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section" id="servicios">
+        <div class="container">
+            <h2>Servicios</h2>
+            <p>Ofrecemos clases interactivas y divertidas para que aprender no sea tan aburrido.<br>
+               ¿Por qué aprender diseño web con nosotros?<br>
+               En nuestras clases de diseño web aprenderás a planificar, diseñar y construir sitios atractivos y funcionales.<br> 
+               Te enseñamos paso a paso, desde los fundamentos hasta técnicas avanzadas utilizadas por profesionales.<br>
+               Lo que aprenderás:</p><br>
+
+            <ul>
+                <li>HTML5 y CSS3 desde cero</li>
+                <li>Introducción a JavaScript</li>
+                <li>Buenas prácticas, accesibilidad y optimización web</li>
+                <li>Uso de herramientas como Figma, VSCode, WordPress y más</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="content-section" id="equipo">
+        <div class="container">
+            <h2>🎓 Nuestros Cursos</h2>
+             <h3>Curso: Diseño Web desde Cero</h3>
+              <p> Aprende las bases del diseño digital y la construcción de sitios web usando HTML y CSS.<br>
+                Ideal para: principiantes absolutos.<br>
+                Incluye: ejercicios prácticos, plantillas y proyectos reales.</p>
+
+               <h3> Curso: Diseño Responsivo y Mobile First</h3>
+               <p>Domina técnicas modernas para crear sitios que se adapten a cualquier pantalla.<br>
+                Incluye: Flexbox, Grid, media queries y patrones de diseño.</p>
+
+                <h3>Curso: Diseño UI/UX para Web</h3>
+                <p>Descubre cómo crear interfaces intuitivas y agradables que aumenten la experiencia del usuario.<br>
+                Incluye: colores, tipografías, wireframes, prototipos y Figma.</p>
+
+               <h3> Curso: Web Moderno con HTML, CSS y JS</h3>
+               <p>Lleva tus habilidades al siguiente nivel con efectos dinámicos, animaciones y sitios interactivos.</p>
+        </div>
+    </section>
+
+    <section class="content-section" id="blog">
+        <div class="container">
+            <h2>Blog</h2>
+            <h3>❓ ¿Qué es  el Diseño Web?</h3>
+               <p>El diseño web es la disciplina que combina creatividad, tecnología y estrategia para crear
+                sitios web atractivos, funcionales y optimizados para cualquier dispositivo.
+                Incluye áreas como:<br></p>
+               <ul>
+                <li>Diseño visual (UI)</li>
+                <li>Experiencia de usuario (UX)</li>
+                <li>Maquetación con HTML y CSS</li>
+                <li>Animaciones y transiciones</li>
+                <li>Diseño responsivo</li>
+                <li>Buenas prácticas de accesibilidad</li>
+               </ul>
+                <p>Aprender diseño web te permite crear desde páginas personales hasta proyectos 
+                profesionales para empresas.</p>
+        </div>
+    </section>
+
+    <section class="content-section" id="contacto">
+        <div class="container">
+            <h2>📞 Contacto</h2>
+            <p> ¿Tienes dudas? Estamos para ayudarte.<br>
+                📩 contacto@aprendedisenoweb.com<br>
+                📱 WhatsApp: +159 567 987<br>
+                📍 Disponible 100% online</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 OnlyTwo.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript para el menú hamburguesa -->
+    <script src="tarea3.js"></script>
+</body>
+</html>

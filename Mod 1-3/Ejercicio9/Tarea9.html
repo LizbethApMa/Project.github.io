@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Sticky | Posicionamiento CSS</title>
+    <link rel="stylesheet" href="tarea9.css">
+</head>
+<body>
+    <!-- Navegación Sticky -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <span class="logo-icon">🚀</span>
+                <span class="logo-text">OnlyThree</span>
+            </a>
+
+            <button class="nav-toggle" id="navToggle">
+                <span class="hamburger"></span>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#pricing" class="nav-link">Precios</a></li>
+                <li><a href="#testimonios" class="nav-link">Testimonios</a></li>
+                <li><a href="#contacto" class="nav-link btn-cta">Comenzar</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <h1>🎯 Domina el Diseño Web desde Cero y Crea Sitios Increíbles</h1>
+            <p class="subtitle">SAprende a diseñar y desarrollar páginas web modernas, responsivas y profesionales con una metodología práctica y accesible.</p>
+            <div class="scroll-indicator">
+                <p>Nuestros Servicios ↓</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section">
+        <div class="container">
+            <h2>✨ Características</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="icon">📍</div>
+                    <h3>Diseño Web desde Cero</h3>
+                    <p>Aprende las bases del diseño digital y la construcción de sitios web usando HTML y CSS.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🔄</div>
+                    <h3>Diseño Responsivo y Mobile First</h3>
+                    <p>Domina técnicas modernas para crear sitios que se adapten a cualquier pantalla.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">⚡</div>
+                    <h3>Diseño UI/UX para Web</h3>
+                    <p>Descubre cómo crear interfaces intuitivas y agradables que aumenten la experiencia del usuario.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🎨</div>
+                    <h3>Web Moderno con HTML, CSS y JS</h3>
+                    <p>Lleva tus habilidades al siguiente nivel con efectos dinámicos, animaciones y sitios interactivos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="section section-alt">
+        <div class="container">
+            <h2>💰 Precios</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Básico</h3>
+                    <p class="price">$9<span>/mes</span></p>
+                    <ul>
+                        <li>✔️ 5 Proyectos</li>
+                        <li>✔️ 10GB Almacenamiento</li>
+                        <li>✔️ Soporte Email</li>
+                    </ul>
+                    <button>Seleccionar</button>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="badge">Popular</div>
+                    <h3>Pro</h3>
+                    <p class="price">$29<span>/mes</span></p>
+                    <ul>
+                        <li>✔️ Proyectos Ilimitados</li>
+                        <li>✔️ 100GB Almacenamiento</li>
+                        <li>✔️ Soporte Prioritario</li>
+                    </ul>
+                    <button>Seleccionar</button>
+                </div>
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <p class="price">$99<span>/mes</span></p>
+                    <ul>
+                        <li>✔️ Todo Ilimitado</li>
+                        <li>✔️ 1TB Almacenamiento</li>
+                        <li>✔️ Soporte 24/7</li>
+                    </ul>
+                    <button>Contactar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonios" class="section">
+        <div class="container">
+            <h2>💬 Lo que Dicen Nuestros Usuarios</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <p class="quote">“Aprender diseño web aquí me permitió conseguir mis primeros clientes. El método es claro y muy práctico.”</p>
+                    <p class="author">- María García, UX Designer</p>
+                </div>
+                <div class="testimonial">
+                    <p class="quote">“¡Los proyectos finales me ayudaron a crear mi portafolio profesional en poco tiempo!”</p>
+                    <p class="author">- Carlos Pérez, Frontend Developer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="section section-alt">
+        <div class="container">
+            <h2>📧 Contacto</h2>
+            <p>¿Tienes preguntas? ¡Contáctanos!</p>
+            <form class="contact-form">
+                <input type="text" placeholder="Nombre" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Mensaje" rows="5" required></textarea>
+                <button type="submit" class="btn-submit">Enviar Mensaje</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 OnlyThree</p>
+        </div>
+    </footer>
+
+    <!-- Botón "Volver Arriba" (Position: Fixed) -->
+    <button class="btn-top" id="btnTop" title="Volver arriba">
+        ↑
+    </button>
+
+    <script src="tarea9.js"></script>
+</body>
+</html>
