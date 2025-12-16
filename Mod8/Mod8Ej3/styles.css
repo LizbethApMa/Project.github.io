@@ -1,0 +1,57 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #f782e4;
+  padding: 20px;
+}
+
+.board {
+  width: 420px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin: 20px auto;
+}
+
+.card {
+  width: 90px;
+  height: 90px;
+  background: #3b009b;
+  color: rgb(17, 16, 17);
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 15px;
+  border: 5px groove rgb(255, 0, 106);
+  transform: rotateY(180deg);
+  transition: transform 0.4s;
+}
+
+.card.revealed {
+  background: #cc76ab;
+  transform: rotateY(0deg);
+}
+
+.card.matched {
+  background: #b86cf7;
+  cursor: default;
+}
+
+.info {
+  display: flex;
+  color :aliceblue;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 8px 15px;
+  cursor: pointer;
+  border: none;
+  background: #f50303;
+  color: white;
+  border-radius: 5px;
+}
