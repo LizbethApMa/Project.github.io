@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f380d6 0%, #770b8d 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.calculator {
+    background: rgb(36, 0, 41);
+    border-radius: 20px;
+    border: 3px groove rgb(206, 168, 245);
+    padding: 2rem;
+    box-shadow: 0 20px 60px rgb(163, 162, 162);
+    max-width: 400px;
+    width: 100%;
+}
+
+.display {
+    background: #1a1a2e;
+    border-radius: 10px;
+    border: 2px solid rgb(206, 168, 245);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: right;
+    min-height: 100px;
+}
+
+.previous-operand {
+    color: rgba(241, 233, 233, 0.5);
+    font-size: 1.2rem;
+    min-height: 1.5rem;
+}
+
+.current-operand {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    padding: 1.5rem;
+    font-size: 1.2rem;
+    border: 3px groove rgb(250, 63, 219);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 600;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn-number {
+    background: #fab3df;
+    color: #333;
+}
+
+.btn-number:hover {
+    background: #ee8e8e;
+}
+
+.btn-operator {
+    background: linear-gradient(135deg, #012df0 0%, #dd0a9e 100%);
+    color: white;
+}
+
+.btn-clear {
+    background: #953ab9;
+    color: rgb(255, 254, 254);
+}
+
+.btn-delete {
+    background: #a12525;
+    color: white;
+}
+
+.btn-equals {
+    background: #972c85;
+    color: white;
+}
+
+.span-2 {
+    grid-column: span 2;
+}
+
+.history {
+    border-top: 2px dashed #fd0404;
+    padding-top: 1rem;
+}
+
+.history h3 {
+    color: #dad7d7;
+    margin-bottom: 1rem;
+}
+
+.history-list {
+    max-height: 200px;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+}
+
+.history-item {
+    background: #f1b6fd;
+    padding: 0.5rem;
+    margin-bottom: 0.3rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    color: #363636;
+}
+
+.btn-clear-history {
+    width: 100%;
+    padding: 0.8rem;
+    background: #fc5e5e;
+    color: rgb(5, 5, 5);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
