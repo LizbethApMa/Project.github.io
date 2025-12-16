@@ -1,0 +1,28 @@
+body {
+    background: #ffabab;
+}
+.hero-section {
+    background: linear-gradient(135deg, #ff6fd4 0%, #ff0303 100%);
+}
+
+.min-vh-75 {
+    min-height: 75vh;
+}
+
+.card {
+    transition: transform 0.3s ease;
+    border-radius: 15px;
+    background: #ff6fd4;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+footer a {
+    transition: opacity 0.3s;
+}
+
+footer a:hover {
+    opacity: 0.7;
+}

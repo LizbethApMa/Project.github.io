@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStartup - Landing Page | Bootstrap 5</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- =====================================================
+         NAVBAR - Bootstrap 5
+         Componentes utilizados:
+         - navbar, navbar-expand-lg, navbar-dark
+         - container, navbar-brand, navbar-toggler
+         - navbar-nav, nav-item, nav-link
+         - dropdown, dropdown-menu, dropdown-item
+         - d-flex, gap-2, btn
+         ===================================================== -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                <div class="brand-icon">
+                    <i class="bi bi-rocket-takeoff"></i>
+                </div>
+                <span class="brand-text">InnovaCorp</span>
+            </a>
+            
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Navigation Links -->
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Características</a>
+                    </li>
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Productos
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="#">
+                                <i class="bi bi-cloud me-2"></i>Cloud Platform
+                            </a></li>
+                            <li><a class="dropdown-item" href="#">
+                                <i class="bi bi-shield-check me-2"></i>Security Suite
+                            </a></li>
+                            <li><a class="dropdown-item" href="#">
+                                <i class="bi bi-graph-up me-2"></i>Analytics Pro
+                            </a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">
+                                <i class="bi bi-grid me-2"></i>Ver todos
+                            </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pricing">Precios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contacto</a>
+                    </li>
+                </ul>
+                
+                <!-- CTA Buttons -->
+                <div class="d-flex gap-2">
+                    <a href="#" class="btn btn-outline-light btn-sm">Iniciar Sesión</a>
+                    <a href="#" class="btn btn-primary btn-sm">
+                        Comenzar Gratis
+                        <i class="bi bi-arrow-right ms-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- =====================================================
+         HERO SECTION - Bootstrap 5
+         Componentes utilizados:
+         - container, row, col-lg-6
+         - d-flex, flex-column, justify-content-center
+         - display-3, lead, text-muted
+         - btn btn-lg, btn-primary, btn-outline-light
+         - position-relative, img-fluid
+         ===================================================== -->
+    <section class="hero-section">
+        <!-- Background Elements -->
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        
+        <div class="container">
+            <div class="row align-items-center min-vh-100 py-5">
+                <!-- Left Content -->
+                <div class="col-lg-6 hero-content">
+                    <!-- Badge -->
+                    <div class="hero-badge mb-4">
+                        <span class="badge-icon"><i class="bi bi-stars"></i></span>
+                        <span>Nuevo: Lanzamos la versión 3.0</span>
+                        <i class="bi bi-chevron-right"></i>
+                    </div>
+                    
+                    <!-- Heading -->
+                    <h1 class="display-3 fw-bold mb-4">
+                        Construye el futuro
+                        <span class="text-gradient">de tu negocio</span>
+                    </h1>
+                    
+                    <!-- Description -->
+                    <p class="lead text-secondary mb-4">
+                        Potencia tu empresa con nuestra plataforma de última generación. 
+                        Automatiza procesos, analiza datos y escala sin límites.
+                    </p>
+                    
+                    <!-- CTA Buttons -->
+                    <div class="d-flex flex-wrap gap-3 mb-5">
+                        <a href="#" class="btn btn-primary btn-lg px-4">
+                            <i class="bi bi-play-circle me-2"></i>
+                            Comenzar Ahora
+                        </a>
+                        <a href="#" class="btn btn-outline-light btn-lg px-4">
+                            <i class="bi bi-camera-video me-2"></i>
+                            Ver Demo
+                        </a>
+                    </div>
+                    
+                    <!-- Trust Indicators -->
+                    <div class="trust-section">
+                        <p class="text-muted small mb-3">Confían en nosotros:</p>
+                        <div class="d-flex flex-wrap align-items-center gap-4">
+                            <div class="trust-logo">
+                                <i class="bi bi-google"></i>
+                            </div>
+                            <div class="trust-logo">
+                                <i class="bi bi-microsoft"></i>
+                            </div>
+                            <div class="trust-logo">
+                                <i class="bi bi-apple"></i>
+                            </div>
+                            <div class="trust-logo">
+                                <i class="bi bi-meta"></i>
+                            </div>
+                            <div class="trust-logo">
+                                <i class="bi bi-amazon"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Content - Hero Image -->
+                <div class="col-lg-6 hero-image-col">
+                    <div class="hero-image-wrapper">
+                        <!-- Main Dashboard Card -->
+                        <div class="dashboard-card main-card">
+                            <div class="card-header-custom">
+                                <div class="window-controls">
+                                    <span class="control red"></span>
+                                    <span class="control yellow"></span>
+                                    <span class="control green"></span>
+                                </div>
+                                <span class="card-title-text">Dashboard Analytics</span>
+                            </div>
+                            <div class="card-body-custom">
+                                <!-- Stats Row -->
+                                <div class="stats-row">
+                                    <div class="stat-item">
+                                        <span class="stat-value">$48.2K</span>
+                                        <span class="stat-label">Ingresos</span>
+                                        <span class="stat-change positive">
+                                            <i class="bi bi-arrow-up"></i> 12%
+                                        </span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-value">2,847</span>
+                                        <span class="stat-label">Usuarios</span>
+                                        <span class="stat-change positive">
+                                            <i class="bi bi-arrow-up"></i> 8%
+                                        </span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-value">94.2%</span>
+                                        <span class="stat-label">Retención</span>
+                                        <span class="stat-change positive">
+                                            <i class="bi bi-arrow-up"></i> 3%
+                                        </span>
+                                    </div>
+                                </div>
+                                <!-- Chart Placeholder -->
+                                <div class="chart-area">
+                                    <svg viewBox="0 0 400 100" class="chart-svg">
+                                        <defs>
+                                            <linearGradient id="chartGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                                <stop offset="0%" style="stop-color:#6366f1;stop-opacity:0.3" />
+                                                <stop offset="100%" style="stop-color:#6366f1;stop-opacity:0" />
+                                            </linearGradient>
+                                        </defs>
+                                        <path d="M0,80 Q50,60 100,65 T200,40 T300,50 T400,20 L400,100 L0,100 Z" fill="url(#chartGradient)" />
+                                        <path d="M0,80 Q50,60 100,65 T200,40 T300,50 T400,20" fill="none" stroke="#6366f1" stroke-width="3" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Floating Card 1 -->
+                        <div class="floating-card card-notifications">
+                            <div class="floating-icon">
+                                <i class="bi bi-bell"></i>
+                            </div>
+                            <div class="floating-content">
+                                <span class="floating-title">Nuevas ventas</span>
+                                <span class="floating-value">+24 hoy</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Floating Card 2 -->
+                        <div class="floating-card card-performance">
+                            <div class="circular-progress">
+                                <svg viewBox="0 0 36 36">
+                                    <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#1e293b" stroke-width="3" />
+                                    <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#22c55e" stroke-width="3" stroke-dasharray="87, 100" />
+                                </svg>
+                                <span class="progress-value">87%</span>
+                            </div>
+                            <span class="floating-label">Performance</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll para explorar</span>
+        </div>
+    </section>
+
+    <!-- =====================================================
+         FEATURES SECTION - Quick Preview
+         ===================================================== -->
+    <section id="features" class="features-section py-5">
+        <div class="container py-5">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="display-5 fw-bold mb-3">¿Por qué elegirnos?</h2>
+                    <p class="lead text-secondary">
+                        Descubre las características que nos hacen únicos
+                    </p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Feature 1 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-lightning-charge"></i>
+                        </div>
+                        <h5>Ultra Rápido</h5>
+                        <p class="text-secondary small">Rendimiento optimizado para cargas instantáneas.</p>
+                    </div>
+                </div>
+                <!-- Feature 2 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-shield-lock"></i>
+                        </div>
+                        <h5>100% Seguro</h5>
+                        <p class="text-secondary small">Encriptación de nivel bancario para tus datos.</p>
+                    </div>
+                </div>
+                <!-- Feature 3 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-graph-up-arrow"></i>
+                        </div>
+                        <h5>Escalable</h5>
+                        <p class="text-secondary small">Crece sin límites con nuestra infraestructura.</p>
+                    </div>
+                </div>
+                <!-- Feature 4 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-headset"></i>
+                        </div>
+                        <h5>Soporte 24/7</h5>
+                        <p class="text-secondary small">Siempre disponibles para ayudarte.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center py-4">
+                <p class="mb-0 text-secondary">
+                    Ejercicio 2 de 3 | Bootstrap 5 - Navbar + Hero
+                </p>
+                <div class="d-flex gap-3">
+                    <span class="text-muted">01 Botones</span>
+                    <span class="text-success fw-semibold">02 Navbar + Hero</span>
+                    <span class="text-muted">03 Dashboard</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
