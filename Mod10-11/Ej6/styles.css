@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Audiowide', sans-serif;
+    background: linear-gradient(135deg, #ff0404 0%, #9900ff 100%);
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    color: white;
+    margin-bottom: 3rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.apis-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.api-card {
+    background: rgb(104, 238, 227);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 5px inset blue;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.api-card h2 {
+    color: #181717;
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+}
+
+button {
+    background: linear-gradient(135deg, #3508ff 0%, #e00404 100%);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    transition: transform 0.3s;
+}
+
+button:hover:not(:disabled) {
+    transform: translateY(-2px);
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #070066;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.result {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #ff9090;
+    border-radius: 8px;
+    min-height: 50px;
+    color: #070707;
+}
+
+#myCanvas {
+    width: 100%;
+    border: 5px groove #150072;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.canvas-card {
+    grid-column: span 2;
+}
+
+.canvas-controls {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.drop-zones {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.zone {
+    min-height: 200px;
+    padding: 1rem;
+    border: 2px dashed #380049;
+    border-radius: 8px;
+    background: #ff62e5;
+}
+
+.zone.dragover {
+    border-color: #ff0d21;
+    background: #fd5c5c;
+}
+
+.draggable {
+    background: linear-gradient(135deg, #19c9ff 0%, #2507a7 100%);
+    color: white;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    cursor: move;
+    user-select: none;
+}
+
+.draggable.dragging {
+    opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+    .apis-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .canvas-card {
+        grid-column: span 1;
+    }
+    
+    .drop-zones {
+        grid-template-columns: 1fr;
+    }
+}

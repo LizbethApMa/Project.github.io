@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Audiowide', sans-serif;
+    background: linear-gradient(135deg, #ee38ff 0%, #ff1717 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+}
+
+.form-wrapper {
+    background: rgb(223, 145, 253);
+    padding: 2.5rem;
+    border-radius: none;
+    border: 5px solid rebeccapurple;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    color: #320146;
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
+.subtitle {
+    color: #8d0018;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"] {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #2347e9;
+}
+
+input.valid {
+    border-color: #13dd1a;
+}
+
+input.invalid {
+    border-color: #f81303;
+}
+
+.error-message {
+    display: none;
+    color: #f44336;
+    font-size: 0.85rem;
+    margin-top: 0.3rem;
+}
+
+.form-group.error .error-message {
+    display: block;
+}
+
+.success-icon {
+    position: absolute;
+    right: 1rem;
+    top: 2.8rem;
+    color: #4caf50;
+    font-size: 1.2rem;
+    display: none;
+}
+
+.form-group.valid .success-icon {
+    display: block;
+}
+
+.password-strength {
+    margin-top: 0.5rem;
+}
+
+.strength-bar {
+    height: 5px;
+    background: #141414;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 0.3rem;
+}
+
+.strength-bar::before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 0%;
+    transition: all 0.3s;
+}
+
+.strength-bar.weak::before {
+    width: 33%;
+    background: #f44336;
+}
+
+.strength-bar.medium::before {
+    width: 66%;
+    background: #ff9800;
+}
+
+.strength-bar.strong::before {
+    width: 100%;
+    background: #4caf50;
+}
+
+.strength-text {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+}
+
+.checkbox-group label {
+    margin: 0;
+    font-weight: normal;
+}
+
+.submit-btn {
+    font-family: 'Audiowide', sans-serif;
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(135deg, #6200ff 0%, #ff0c0c 100%);
+    color: white;
+    border:none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+}
+
+.submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #3b3b3b;
+}
+
+.login-link a {
+    color: #ee1b1b;
+    text-decoration: none;
+    font-weight: bold;
+}

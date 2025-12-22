@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    font-family: 'Inter', sans-serif;
+    background-color: #57045f; /* Fondo oscuro tipo Photoshop */
+    color: white;
+}
+
+/* Barra lateral de herramientas */
+.sidebar {
+    width: 240px;
+    background-color: #57096e;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.5);
+}
+
+.section-title {
+    display: block;
+    font-size: 0.7rem;
+    color: #ddd9d9;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.control-group {
+    border-bottom: 1px solid #444;
+    padding-bottom: 15px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    background: #fa7bb6;
+    border: 1px solid #f70707;
+    color: rgb(0, 0, 0);
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: left;
+}
+
+button:hover { background: #d823c9; }
+button.active { background: #e11ae8; border-color: #d71ae8; }
+
+.tool-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
+
+/* Área de trabajo del canvas */
+.editor-area {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+
+canvas {
+    background: white;
+    box-shadow: 0 0 30px rgba(0,0,0,0.8);
+    cursor: crosshair;
+}
